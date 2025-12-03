@@ -1,0 +1,45 @@
+================================================================================
+Return statements
+================================================================================
+
+(do-for-all-facts ((?be free)) (eq ?fraa ?free)
+  (modify ?be (mulslot $?bums))
+)
+
+
+--------------------------------------------------------------------------------
+
+(CLIPS_program
+  (fact_query
+    (do_for_all_facts_expression
+      (fact_set_template
+        (fact_set_member_template
+          (single_field_variable
+            (symbol))
+          (name
+            (symbol))))
+      (query
+        (function_call
+          (function_name
+            (symbol))
+          (variable
+            (single_field_variable
+              (symbol)))
+          (variable
+            (single_field_variable
+              (symbol)))))
+      (action
+        (function_call
+          (function_name
+            (symbol))
+          (variable
+            (single_field_variable
+              (symbol)))
+          (function_call
+            (function_name
+              (symbol))
+            (constant
+              (symbol))
+            (variable
+              (single_field_variable
+                (symbol)))))))))
