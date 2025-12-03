@@ -10,13 +10,14 @@ It enables **syntax highlighting** and semantic token highlighting for `.clp` fi
 
 1. Install the [Tree-sitter VS Code extension](https://marketplace.visualstudio.com/items?itemName=AlecGhost.tree-sitter-vscode).
 
-2. Add the following to your **VS Code `settings.json`** (adjust paths to point to this repository):
+2. Add the following to your **VS Code `settings.json`** (adjust paths to point to this repository, needs to be an absolute path).
+The settings can be opened via `<ctrl>+<shift>+p > Preferences: Open User Settings (JSON)`.
 
 ```json
 "tree-sitter-vscode.languageConfigs": [
   {
     "lang": "clips",
-    "parser": "<path-to-this-repo>/tree-sitter-CLIPS/parser/tree-sitter-clips.wasm",
+    "parser": "<path-to-this-repo>/tree-sitter-CLIPS/tree-sitter-clips.wasm",
     "highlights": "<path-to-this-repo>/tree-sitter-CLIPS/queries/highlights.scm",
     "injections": "<path-to-this-repo>/tree-sitter-CLIPS/queries/injections.scm",
     "semanticTokenTypeMappings": {
@@ -44,5 +45,7 @@ You can hack an existing VS Code extension’s `package.json` (located at `~/.vs
   }
 ],
 ```
+
+Make sure vs code is loaded again via `<ctrl>+<shift>+p > Developer: Reload Window`.
 
 Open a .clp file. Syntax highlighting should now work.
