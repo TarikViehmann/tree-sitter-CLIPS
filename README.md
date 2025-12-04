@@ -10,7 +10,7 @@ It enables **syntax highlighting** and semantic token highlighting for `.clp` fi
 
 1. Install the [Tree-sitter VS Code extension](https://marketplace.visualstudio.com/items?itemName=AlecGhost.tree-sitter-vscode).
 
-2. Add the following to your **VS Code `settings.json`** (adjust paths to point to this repository, needs to be an absolute path).
+2. Add the following to your **VS Code `settings.json`** (adjust paths to point to this repository, needs to be an absolute path, `~/` does not work).
 The settings can be opened via `<ctrl>+<shift>+p > Preferences: Open User Settings (JSON)`.
 
 ```json
