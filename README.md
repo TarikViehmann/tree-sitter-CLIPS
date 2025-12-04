@@ -19,7 +19,6 @@ The settings can be opened via `<ctrl>+<shift>+p > Preferences: Open User Settin
     "lang": "clips",
     "parser": "<path-to-this-repo>/tree-sitter-CLIPS/tree-sitter-clips.wasm",
     "highlights": "<path-to-this-repo>/tree-sitter-CLIPS/queries/highlights.scm",
-    "injections": "<path-to-this-repo>/tree-sitter-CLIPS/queries/injections.scm",
     "semanticTokenTypeMappings": {
       "constant": {
         "targetTokenModifiers": ["declaration", "readonly"],
