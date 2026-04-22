@@ -21,6 +21,7 @@ module.exports = grammar({
     _construct_name: $ => $.name,
     name: $ => prec(1,$.symbol),
     string: $ => /"[^"]*"/,
+    string: $ => /\"([^\"\\]|\\.)*\"/,
     float: $ => prec(2,/[+-]?\d+\.\d+/),
     integer: $ => prec(1,/[+-]?\d+/),
     _index: $ => $.integer,
@@ -28,9 +29,9 @@ module.exports = grammar({
     number: $ => prec(1,choice($.float, $.integer)),
     lexeme: $ => choice($.symbol, $.string),
     constant: $ => prec(2,choice($.number, $.string, $.symbol, $.instance_name)),
-    comment: $ => prec(1,/"[^"]*"/),
+    comment: $ => prec(1,/\"([^\"\\]|\\.)*\"/),
     comment_line: $ => token(seq(';', /[^\n\r]*/)),
-	symbol: $ => prec(3,/<?[a-zA-Z0-9_\-\/\+$\*][a-zA-Z0-9_\-\/\+$\*]*/),
+    symbol: $ => prec(3,/<?[a-zA-Z0-9_\-\/\+$\*][a-zA-Z0-9_\-\/\+$\*]*/),
 
 
     _variable_symbol: $ => $.symbol,
